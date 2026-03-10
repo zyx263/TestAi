@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务管理应用</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>任务管理</h1>
+        <button id="themeToggle" aria-label="切换主题">🌙</button>
+    </header>
+    <main>
+        <section aria-labelledby="task-form-heading">
+            <h2 id="task-form-heading">添加新任务</h2>
+            <form id="taskForm">
+                <input type="text" id="taskInput" placeholder="请输入任务内容" required aria-label="任务内容">
+                <button type="submit">添加任务</button>
+            </form>
+            <div id="errorMessage" class="error-message"></div>
+        </section>
+        <section aria-labelledby="task-list-heading">
+            <h2 id="task-list-heading">任务列表</h2>
+            <div class="filter-buttons">
+                <button id="filterAll" class="filter-btn active">全部</button>
+                <button id="filterPending" class="filter-btn">待处理</button>
+                <button id="filterCompleted" class="filter-btn">已完成</button>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 我的任务管理</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
